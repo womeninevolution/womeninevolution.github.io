@@ -1,0 +1,26 @@
+name: "women-in-evolution"
+output_dir: "docs"
+output:
+  html_document:
+    theme: flatly
+navbar:
+  title: "Women in Evolution"
+  left:
+    - text: ""
+      icon: fa-home
+      href: index.html
+    - text: "Join"
+      href: join.html
+    - text: "Map"
+      href: map.html
+    - text: "Database"
+      href: table.html
+    - text: "About"
+      href: about.html
+
+
+  right:
+    - icon: ion-social-twitter
+      href: https://twitter.com/evolwomen
+    - icon: fa-envelope
+      href: mailto:500womeninevolution@gmail.com
