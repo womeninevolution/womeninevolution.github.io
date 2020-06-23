@@ -1,0 +1,59 @@
+---
+title: "Women in Evolution Map"
+---
+
+This is an interactive map. Clicking on the logo will open a pop-up with further information.
+
+
+```{r include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo=FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r}
+library(dplyr)
+library(leaflet)
+```
+
+
+
+```{r}
+dat <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1T824yBkiFCWqRD-cdJqzJwmeZyQF86tX-PM9WT63_qs/edit?usp=sharing")
+datos <- dat %>%
+  mutate(Name = paste(`Last name`, `First name`, sep = " ")) %>%
+  mutate(Name = ifelse(!is.na(Website), 
+                       paste0('<a href="', Website, '"target="_blank">', Name, '</a>'),
+                       Name)) %>%
+  dplyr::select(Name, Longitude, Latitude) %>%
+  mutate(Longitude = as.numeric(Longitude),
+         Latitude = as.numeric(Latitude))
+## jitter coords a bit so that points don't overlap completely in the map
+datos <- datos %>%
+  mutate(Longitude = jitter(Longitude, amount = 0.05),
+         Latitude = jitter(Latitude, amount = 0.05))
+```
+
+
+```{r}
+## could use CoordinateCleaner::cc_coun to check if coords within stated country
+# https://rdrr.io/cran/CoordinateCleaner/man/cc_coun.html
+```
+
+
+```{r out.width='100%'}
+icon.mw <- makeIcon(
+  iconUrl = "chincheta.png",
+  iconWidth = 20, iconHeight = 20,
+  iconAnchorX = 10, iconAnchorY = 10
+)
+leaflet(datos) %>%
+  fitBounds(-176, -50, 176, 50) %>%
+  addProviderTiles(providers$CartoDB.Positron, 
+                   options = providerTileOptions(noWrap = TRUE)) %>% 
+  addMarkers(
+    ~Longitude, ~Latitude,
+    popup = ~Name,
+    icon = icon.mw
+    #clusterOptions = markerClusterOptions()
+  )
+```

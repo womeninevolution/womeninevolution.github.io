@@ -1,0 +1,41 @@
+---
+title: "MitoWomen database"
+---
+
+Here you can search the full Women in Mitochondria database.
+
+<br>
+
+```{r include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo=FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r}
+library(dplyr)
+library(DT)
+```
+
+
+```{r}
+dat <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1MfJyhC0fLeObYGcCEV3hZcgs5EhEmW1glSIXdaZRch0/edit?usp=sharing")
+datos <- dat %>%
+  dplyr::select(-`Marca temporal`, -starts_with("If you want")) %>%
+  dplyr::arrange(`Last name`) %>%
+  mutate(Name = paste(`Last name`, `First name`, sep = " ")) %>%
+  mutate(Name = ifelse(!is.na(Website), 
+                       paste0('<a href="', Website, '"target="_blank">', Name, '</a>'),
+                       Name)) %>%
+  mutate(Twitter = ifelse(!is.na(`Twitter handle`), 
+                          paste0('<a href="https://twitter.com/', `Twitter handle`, 
+                                 '" target="_blank">', `Twitter handle`, '</a>'),
+                          `Twitter handle`)) %>%
+  dplyr::select(Name, Position, `University/Institution`, City, Country, 
+                Email, Twitter, Keywords) 
+```
+
+
+```{r out.width='100%'}
+# shuffle people randomly?
+datatable(datos, rownames = FALSE, filter = "top", escape = c(-1, - 7))
+```

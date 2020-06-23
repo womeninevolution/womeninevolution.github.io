@@ -1,0 +1,11 @@
+---
+title: "Join the Women in Evolution database"
+---
+
+Please fill in and submit this form to join the Women in Evolution initiative! Your data will appear on the [table](table.html) and, if you provide coordinates, also in the [map](map.html).
+
+If you can't see the form below, please [click here](https://docs.google.com/forms/d/e/1FAIpQLSeOmMTgR6_hUjDpM4Y5aMmDsajw3y6EJVwZ7iV3yWb_78kOag/viewform?usp=sf_link).
+
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_url("https://docs.google.com/forms/d/e/1FAIpQLSeOmMTgR6_hUjDpM4Y5aMmDsajw3y6EJVwZ7iV3yWb_78kOag/viewform?usp=sf_link", height = "800px")
