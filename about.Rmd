@@ -1,0 +1,11 @@
+---
+title: "About the Women in Evolution initiative"
+---
+
+We are a group of evolutionary biologists who want to increase connectivity between female scientists in the field of evolution. This repository is intended to work as a database to find peers working on evolutionary sciences. Hopefully it will serve as a catalyzer for a most needed higher representation of female scientists in conferences, committees, etc. Feel free to browse our database and connect with members. 
+
+This movement was started, in alphabetical order, by [Isabel Almudí](https://twitter.com/IsabelAlmudi), [Paula Arribas](https://twitter.com/Pau_Arribas) [Gloria Brea-Calvo](https://twitter.com/gloriabreacalvo), [Elena Casacuberta](https://twitter.com/Elenacleomina), [Rosa Fernández](https://twitter.com/Rosamygale) and [Ana Riesgo](https://twitter.com/anariesgogil) in a plea to increase the visibility of female scientists in our field. 
+
+For more information feel free to contact us at 500womeninevolution@gmail.com.
+
+This website is made with [Rmarkdown](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html) and the code is publicly available [here](https://github.com/womeninevolution/womeninevolution.github.io). We adapted the code from [Mitowomen](https://github.com/mitodisease/mitowomen). If you have some basic knowledge of R/Rmarkdown and git/GitHub it should relatively easy to adapt for similar initiatives.
