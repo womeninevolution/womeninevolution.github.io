@@ -7,13 +7,13 @@ knitr::include_graphics("banner_expanded_1.png")
 ```
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168723787-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=PUTYOURIDHERE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-168723787-1');
+  gtag('config', 'PUTYOURIDHERE');
 </script>
 
 <br>
