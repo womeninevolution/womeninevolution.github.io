@@ -18,7 +18,7 @@ knitr::include_graphics("banner_expanded_1.png")
 
 <br>
 
-The Women in Evolution initiative aims to **increase the visibility and connectivity of women working in the field of evolution**, hopefully serving as a catalyzer towards **a more gender equal and diverse representation** of professionals in this field of knowledge. It is inspired by initiatives like [500 Women Scientist](https://500womenscientists.org/), [Women in Malaria](https://womeninmalaria.weebly.com/), [Women in Soil Science](https://franciskadevries.wordpress.com/women-in-soil-science/), [Women in Microbiology](https://microbiomedigest.com/sample-page/women-in-microbiology-for-keynote-lectures/) or [Women in Mitochondria](https:/womeninmitochondrial.org).
+The Women in Evolution initiative aims to **increase the visibility and connectivity of women working in the field of evolution**, hopefully serving as a catalyzer towards **a more gender equal and diverse representation** of professionals in this field of knowledge. It is inspired by initiatives like [500 Women Scientists](https://500womenscientists.org/), [Women in Malaria](https://womeninmalaria.weebly.com/), [Women in Soil Science](https://franciskadevries.wordpress.com/women-in-soil-science/), [Women in Microbiology](https://microbiomedigest.com/sample-page/women-in-microbiology-for-keynote-lectures/) or [Women in Mitochondria](https:/mitowomen.org).
 
 This database intends to create a network for collaboration and support, and to **increase women visibility** to be considered on **editorial boards, reviewers, keynote speakers or panel members**, among others.
 
