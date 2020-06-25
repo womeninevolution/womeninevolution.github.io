@@ -20,7 +20,7 @@ library(DT)
 ```{r}
 dat <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1T824yBkiFCWqRD-cdJqzJwmeZyQF86tX-PM9WT63_qs/edit?usp=sharing")
 datos <- dat %>%
-  dplyr::select(-`Marca temporal`, -starts_with("If you want")) %>%
+  dplyr::select(-`Timestamp`, -starts_with("If you want")) %>%
   dplyr::arrange(`Last name`) %>%
   mutate(Name = paste(`Last name`, `First name`, sep = " ")) %>%
   mutate(Name = ifelse(!is.na(Website), 
