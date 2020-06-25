@@ -24,6 +24,7 @@ datos <- dat %>%
   mutate(Name = ifelse(!is.na(Website), 
                        paste0('<a href="', Website, '"target="_blank">', Name, '</a>'),
                        Name)) %>%
+  dplyr::rename(Longitude = `Coordinates - Longitude`, Latitude = `Coordinates - Latitude`) %>%
   dplyr::select(Name, Longitude, Latitude) %>%
   mutate(Longitude = as.numeric(Longitude),
          Latitude = as.numeric(Latitude))

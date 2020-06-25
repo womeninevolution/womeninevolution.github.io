@@ -30,7 +30,7 @@ datos <- dat %>%
                           paste0('<a href="https://twitter.com/', `Twitter handle`, 
                                  '" target="_blank">', `Twitter handle`, '</a>'),
                           `Twitter handle`)) %>%
-  dplyr::select(Name, Position, `University/Institution`, City, Country, 
+  dplyr::select(Name, Position, `Institution/University`, City, Country, 
                 Email, Twitter, Keywords) 
 ```
 
